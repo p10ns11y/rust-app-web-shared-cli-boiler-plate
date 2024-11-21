@@ -1,0 +1,14 @@
+[workspace]
+members = [".", "cli", "shared", "web"]
+
+[workspace.dependencies]
+uuid = { version = "1.11.0", features = ["v4"] }
+
+[package]
+name = "multibins"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+shared = { path = "./shared" }
+uuid = { workspace = true, version = "1.11.0" }
