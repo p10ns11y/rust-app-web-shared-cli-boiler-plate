@@ -1,5 +1,5 @@
 [workspace]
-members = [".", "cli", "shared", "web"]
+members = [".", "cli", "devtools", "shared", "web"]
 
 [workspace.dependencies]
 uuid = { version = "1.11.0", features = ["v4"] }
@@ -12,3 +12,11 @@ edition = "2021"
 [dependencies]
 shared = { path = "./shared" }
 uuid = { workspace = true, version = "1.11.0" }
+
+[[bin]]
+name = "devtools"
+path = "devtools/src/main.rs"
+
+[[bin]]
+name = "one-off"
+path = "src/one_off_off_by_one_bit_script.rs"
